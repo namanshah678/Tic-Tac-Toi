@@ -1,17 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.cell'))
     const playerDisplay = Array.from(document.querySelectorAll('.display-Player'))
-    const resetButton = Array.from(document.querySelectorAll('#Restart'))
-    const announcer = Array.from(document.querySelectorAll('.announcer'))
 
-    let board = ['', '', '', '', '', '', '', '', ''];
-    let currentPlayer = 'X';
-    let isGameActive = true;
-
-    const playerX_won = 'PlayerX_Won'
-    const player0_won = 'Player0_Won'
-    const Tie = 'TIE';
-
+    let turn0 = true
     const winningConditions = [
         [0, 1, 2],
         [3, 4, 5],
@@ -23,22 +14,19 @@ window.addEventListener('DOMContentLoaded', () => {
         [2, 4, 6]
     ];
 
-    const isValidAction = (cell) => {
-        if (cell.innerText === 'X' || cell.innerText === "O") {
-            return false;
-        }
-        return true;
-    }
+    tiles.forEach((cell) => {
+        cell.addEventListener("click", () => {
+            console.log("clicked")
+            if (turn0 == true) {
+                cell.innerText = "O";
+                turn0 = false;
+            }
+            else {
+                cell.innerText = "X";
+                turn0 = true;
+            }
+            cell.disabled = true;
+        })
 
-    const updateBoard = (index) =>{
-        board[index] = currentPlayer;
-    }
-    const changePlayer = () =>{
-        playerDisplay.classList.remove(`player${currentPlayer}`);
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        playerDisplay.innerText = currentPlayer;
-        playerDisplay.classList.add(`Player${currentPlayer}`);
-    }
-
-    const 
+    })
 })
