@@ -25,8 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 cell.innerText = "X";
                 turn0 = true;
             }
-            cell.disabled = true;
-        })
+            box.disabled = true;
 
-    })
-})
+            checkwinner();
+        });
+    });
+
+    const checkwinner = () =>{
+        for(let patterns of winningConditions){
+            let po1 = boxs[patterns[0]].innerText;
+            let po2 = boxs[patterns[1]].innerText;
+            let po3 = boxs[patterns[2]].innerText;
+            
+            if(po1 != "" && po2 != "" &&  po3 != ""){
+                if(po1 === po2 && po2 === po3){
+                    console.log("Winner", po1)
+                }
+            }
+        }
+    }
+});
