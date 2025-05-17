@@ -45,6 +45,8 @@ body {
     background-color: black;
     color: white;
     border: none;
+    height: 10vmin;
+    margin: 2rem;
 }
 
 #New_Game {
@@ -57,11 +59,11 @@ body {
 
 #msg {
     color: white;
-    font-size: 5vmin;
+    font-size: 4vmin;
 }
 
 .msg_container {
-    height: 20vmin;
+    height: 16vmin;
     /* color: */
 }
 
