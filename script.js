@@ -73,4 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+    newGame.addEventListener('click', resetGame)
+    Restart.addEventListener('click', resetGame)
 });
