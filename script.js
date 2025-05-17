@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
         [2, 4, 6]
     ];
 
-    tiles.forEach((cell) => {
-        cell.addEventListener("click", () => {
-            console.log("clicked")
-            if (turn0 == true) {
-                cell.innerText = "O";
-                turn0 = false;
+    boxs.forEach((box) => {
+        box.addEventListener("click", () => {
+            // console.log("clicked");
+            if (turnO) {
+                box.innerText = "O"
+                turnO = false;
             }
             else {
                 cell.innerText = "X";
