@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (po1 != "" && po2 != "" && po3 != "") {
                 if (po1 === po2 && po2 === po3) {
                     console.log("Winner", po1)
+                    winner(po1);
                 }
             }
         }
