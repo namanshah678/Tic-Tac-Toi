@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const tiles = Array.from(document.querySelectorAll('.cell'))
-    const playerDisplay = Array.from(document.querySelectorAll('.display-Player'))
+document.addEventListener("DOMContentLoaded", () => {
+    const boxs = document.querySelectorAll('.cell');
+    const Restart = document.querySelector('#Restart');
 
     let turn0 = true
     const winningConditions = [
