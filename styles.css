@@ -9,8 +9,6 @@
 body {
     display: grid;
     justify-content: center;
-    align-items: center;
-    height: 50vh;
     background-color: rgb(35, 203, 52);
     text-align: center;
 }
