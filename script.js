@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const boxs = document.querySelectorAll('.cell');
     const Restart = document.querySelector('#Restart');
+    const newGame = document.querySelector('#New_Game');
+    const msgcontainer = document.querySelector('.msg_container');
+    const msg1 = document.querySelector('#msg');
 
     let turnO = true;
 
