@@ -35,8 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const checkwinner = () =>{
-        for(let patterns of winningConditions){
+    const resetGame = () => {
+        turnO = true;
+        EnabledBoxes();            
+        msgcontainer.classList.add("hide");
+        msg1.innerText = "";   // Hide the message container
+    };
+    const EnabledBoxes = () => {
+        boxs.forEach((box) => {
+            box.disabled = false;
+            box.innerText = "";
+        });
+    }
+
+    const disabledBoxes = () => {
+        boxs.forEach((box) => {
+            box.disabled = true;
+        });
+    }
+
+    const winner = (winner1) => {
+        msg1.innerText = `congratulations the winner is ${winner1}`;
+        msgcontainer.classList.remove("hide");
+        disabledBoxes();
+    }
+
+    const checkwinner = () => {
+        for (let patterns of winningConditions) {
             let po1 = boxs[patterns[0]].innerText;
             let po2 = boxs[patterns[1]].innerText;
             let po3 = boxs[patterns[2]].innerText;
