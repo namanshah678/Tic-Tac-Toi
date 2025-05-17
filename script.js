@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const boxs = document.querySelectorAll('.cell');
     const Restart = document.querySelector('#Restart');
 
-    let turn0 = true
+    let turnO = true;
+
     const winningConditions = [
         [0, 1, 2],
         [3, 4, 5],
@@ -22,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 turnO = false;
             }
             else {
-                cell.innerText = "X";
-                turn0 = true;
+                box.innerText = "X";
+                turnO = true;
             }
             box.disabled = true;
 
